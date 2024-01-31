@@ -1,8 +1,8 @@
 class buffer{
-	public int info;
+	int info;
 	volatile int flag=0;
 	buffer(){flag=0;}
-	public synchronized  put(int n){
+	synchronized void put(int n){
 		if(flag==1) {
 		try{ 
 			wait();
@@ -15,7 +15,7 @@ class buffer{
 		info=n;
 		notify();
 	}
-	public synchronized get(){
+	synchronized void get(){
 		if(flag==0) {
 		try{ 
 			wait();
@@ -30,16 +30,16 @@ class buffer{
 	}
 
 }
-class producer : Thread{
+class producer extends Thread{
 	buffer b_ref;
 	int pid;
-	public producer(buffer b, int id) : base(){
-		
+	producer(buffer b, int id){
+		super();
 		b_ref=b;
 		pid=id;
 		this.start();
 	}
-	public public void run(){
+	public void run(){
 		for(int i=0;i<5;i++){
 			b_ref.put(i); 
 			try{
@@ -50,10 +50,11 @@ class producer : Thread{
 		}
 	}
 }
-class consumer : Thread{
+class consumer extends Thread{
 	buffer b_ref;
 	int cid;
-	consumer(buffer b, int id): base(){
+	consumer(buffer b, int id){
+		super();
 		b_ref=b; 
 		cid=id;
 		start();

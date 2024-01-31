@@ -49,23 +49,23 @@ public class stackClass
 		{
 			for(int i=0;i<=top;i++)
 			  {
-				Console.WriteLine(arr[i] + " ");
-	 		  }Console.WriteLine();
+				Console.Write(arr[i] + " ");
+			  }
 		}
 		
-	
 	public static void Main(String[] args)
 	{
 	  stackClass s = new stackClass(10);
 	  s.push(5);
 	  s.push(3);
 	  s.push(13);
-          Console.WriteLine("Stack : ");
+          Console.Write("Stack : ");
           s.print();
           s.pop();
-Console.WriteLine("Stack After Popping out : ");
+Console.WriteLine("\nStack After Popping out : ");
 	    s.print();
 			
 	}
+	
 	
 }

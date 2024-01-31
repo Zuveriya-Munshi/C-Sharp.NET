@@ -6,9 +6,7 @@ class fibonacci
 {
 	public static void Main(string[] args)
 	{
-		int num;
-		// Scanner s= new Scanner(System.in);
-		num=int.Parse(Console.ReadLine());
+		int num=int.Parse(Console.ReadLine());
 		// int num=s.nextInt();
 		int f0=0, f1=1, f2=0;
 		Console.Write(f0 + ", " + f1);
