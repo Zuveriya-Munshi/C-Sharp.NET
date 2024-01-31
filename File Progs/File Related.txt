@@ -1,0 +1,4 @@
+StreamReader & StreamWriter
+
+File & Directory are static
+FileInfo , DirectoryInfo, DriveInfo are non static
