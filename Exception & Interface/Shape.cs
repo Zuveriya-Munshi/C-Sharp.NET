@@ -6,7 +6,6 @@ interface Shape
 class circle : Shape
 {
     protected double  pi = 3.14;
-    //Console.WriteLine("Enter Radius of Circle : ");
     protected int rad = Convert.ToInt32(Console.ReadLine());
     public void area()
     {
@@ -16,7 +15,6 @@ class circle : Shape
 }
 class square : Shape
 {
-    //Console.WriteLine("Enter side of Square : ");
    
     protected int s = Convert.ToInt32(Console.ReadLine());
     public void area()
@@ -29,8 +27,12 @@ class Inter()
 {
     public static void Main(string[] args)
     {
+        Console.WriteLine("Enter Radius of Circle : ");
+
         circle c = new circle();
         c.area();
+        Console.WriteLine("Enter side of Square : ");
+
         square s = new square();
         s.area();
     }

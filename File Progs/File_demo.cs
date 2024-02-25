@@ -10,9 +10,11 @@ namespace File_Progs
             Console.WriteLine(sr.ReadToEnd());
             sr.Close();
             StreamWriter sw = new StreamWriter("E:\\6th Semester\\donNET\\Lab\\File Progs\\Demo.txt");
-            sw.WriteLine("Writing to demo file");
+            sw.WriteLine("Hello World is written to demo file");
             sw.Flush();
 
         }
     }
 }
+
+
